@@ -1,0 +1,17 @@
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\bin\Debug\BancoFinal.exe.config
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\bin\Debug\BancoFinal.exe
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\bin\Debug\BancoFinal.pdb
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.csproj.AssemblyReference.cache
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.Properties.Resources.resources
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.csproj.GenerateResource.cache
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.exe
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.pdb
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.menuInicial.resources
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.Login.resources
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.ConsignarVista.resources
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.LoginAdmin.resources
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.ZonaAdministrador.resources
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.CrearAdmin.resources
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.EliminarAdmin.resources
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.ConsultarzonaAdminr.resources
