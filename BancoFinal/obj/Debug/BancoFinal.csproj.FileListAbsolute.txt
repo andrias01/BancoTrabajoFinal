@@ -9,9 +9,10 @@ C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.exe
 C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.pdb
 C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.menuInicial.resources
 C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.Login.resources
-C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.ConsignarVista.resources
 C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.LoginAdmin.resources
 C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.ZonaAdministrador.resources
 C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.CrearAdmin.resources
 C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.EliminarAdmin.resources
 C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.ConsultarzonaAdminr.resources
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.ModificarAdmin.resources
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.ConsignarUsuario.resources

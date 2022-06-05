@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace BancoFinal
 {
@@ -16,7 +17,13 @@ namespace BancoFinal
         public menuInicial()
         {
             InitializeComponent();
+            string fileName = "UsuarioEnSesion.txt";
+            StreamReader reader = File.OpenText(fileName);
+            string lineaActual = reader.ReadLine();
+            textBoxUsuarioEnSesion.Text = lineaActual;
+            reader.Close();
         }
+        
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -28,7 +35,7 @@ namespace BancoFinal
         {
             if (PanelVertical.Width == 199)
             {
-                PanelVertical.Width = 73;
+                PanelVertical.Width = 54;
             }
             else
                 PanelVertical.Width = 199;
@@ -83,7 +90,13 @@ namespace BancoFinal
         }
         private void btnConsignar_Click(object sender, EventArgs e)
         {
-            ArbrirConsignarenMenu(new ConsignarVista());
+            ArbrirConsignarenMenu(new ConsignarUsuario());
+        }
+
+        private void btnsignOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MessageBox.Show("Se Cerro la Sesiòn");
         }
     }
 }

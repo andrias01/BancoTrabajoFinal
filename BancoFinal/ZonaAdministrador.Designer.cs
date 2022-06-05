@@ -111,6 +111,7 @@ namespace BancoFinal
             this.btnModificarZonaAdmin.TabIndex = 5;
             this.btnModificarZonaAdmin.Text = "MODIFICAR";
             this.btnModificarZonaAdmin.UseVisualStyleBackColor = true;
+            this.btnModificarZonaAdmin.Click += new System.EventHandler(this.btnModificarZonaAdmin_Click);
             // 
             // btnCrearZonaAdmin
             // 

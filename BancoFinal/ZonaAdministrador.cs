@@ -52,5 +52,10 @@ namespace BancoFinal
             this.Close();
             MessageBox.Show("Se Cerro la seciòn");
         }
+
+        private void btnModificarZonaAdmin_Click(object sender, EventArgs e)
+        {
+            ArbrirConsignarenMenuZonaAdmin(new ModificarAdmin());
+        }
     }
 }

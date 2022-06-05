@@ -40,7 +40,7 @@ namespace BancoFinal
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
             this.textBoxContraseña = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAcceder = new System.Windows.Forms.Button();
+            this.btnAccederInicio = new System.Windows.Forms.Button();
             this.OlvidadoContraseña = new System.Windows.Forms.LinkLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnAdministrador = new System.Windows.Forms.Button();
@@ -180,21 +180,21 @@ namespace BancoFinal
             this.label1.TabIndex = 5;
             this.label1.Text = "LOGIN";
             // 
-            // btnAcceder
+            // btnAccederInicio
             // 
-            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnAcceder.FlatAppearance.BorderSize = 0;
-            this.btnAcceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnAcceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcceder.ForeColor = System.Drawing.Color.LightGray;
-            this.btnAcceder.Location = new System.Drawing.Point(60, 360);
-            this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(263, 40);
-            this.btnAcceder.TabIndex = 3;
-            this.btnAcceder.Text = "ACCEDER";
-            this.btnAcceder.UseVisualStyleBackColor = false;
-            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
+            this.btnAccederInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnAccederInicio.FlatAppearance.BorderSize = 0;
+            this.btnAccederInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnAccederInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAccederInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccederInicio.ForeColor = System.Drawing.Color.LightGray;
+            this.btnAccederInicio.Location = new System.Drawing.Point(60, 360);
+            this.btnAccederInicio.Name = "btnAccederInicio";
+            this.btnAccederInicio.Size = new System.Drawing.Size(263, 40);
+            this.btnAccederInicio.TabIndex = 3;
+            this.btnAccederInicio.Text = "ACCEDER";
+            this.btnAccederInicio.UseVisualStyleBackColor = false;
+            this.btnAccederInicio.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // OlvidadoContraseña
             // 
@@ -245,7 +245,7 @@ namespace BancoFinal
             this.Controls.Add(this.btnAdministrador);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.OlvidadoContraseña);
-            this.Controls.Add(this.btnAcceder);
+            this.Controls.Add(this.btnAccederInicio);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxContraseña);
             this.Controls.Add(this.textBoxUsuario);
@@ -282,7 +282,7 @@ namespace BancoFinal
         private System.Windows.Forms.TextBox textBoxUsuario;
         private System.Windows.Forms.TextBox textBoxContraseña;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAcceder;
+        private System.Windows.Forms.Button btnAccederInicio;
         private System.Windows.Forms.LinkLabel OlvidadoContraseña;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnAdministrador;

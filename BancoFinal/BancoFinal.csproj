@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsignarVista.cs">
+    <Compile Include="ConsultarDatosUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsignarVista.Designer.cs">
-      <DependentUpon>ConsignarVista.cs</DependentUpon>
+    <Compile Include="ConsultarDatosUsuario.Designer.cs">
+      <DependentUpon>ConsultarDatosUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetirarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetirarUsuario.Designer.cs">
+      <DependentUpon>RetirarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsignarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsignarUsuario.Designer.cs">
+      <DependentUpon>ConsignarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultarzonaAdminr.cs">
       <SubType>Form</SubType>
@@ -88,6 +100,12 @@
     <Compile Include="menuInicial.Designer.cs">
       <DependentUpon>menuInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarAdmin.Designer.cs">
+      <DependentUpon>ModificarAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ZonaAdministrador.cs">
@@ -96,8 +114,11 @@
     <Compile Include="ZonaAdministrador.Designer.cs">
       <DependentUpon>ZonaAdministrador.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ConsignarVista.resx">
-      <DependentUpon>ConsignarVista.cs</DependentUpon>
+    <EmbeddedResource Include="ConsignarUsuario.resx">
+      <DependentUpon>ConsignarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarDatosUsuario.resx">
+      <DependentUpon>ConsultarDatosUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarzonaAdminr.resx">
       <DependentUpon>ConsultarzonaAdminr.cs</DependentUpon>
@@ -116,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="menuInicial.resx">
       <DependentUpon>menuInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarAdmin.resx">
+      <DependentUpon>ModificarAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

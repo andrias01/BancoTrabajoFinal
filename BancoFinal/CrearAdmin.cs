@@ -26,7 +26,6 @@ namespace BancoFinal
             public string telefono;
             public string email;
             public string saldo;
-
         }
 
         private void btnGuardarCrearAdmin_Click(object sender, EventArgs e)

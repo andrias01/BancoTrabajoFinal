@@ -31,7 +31,6 @@ namespace BancoFinal
         {
             this.tituloCrear = new System.Windows.Forms.Label();
             this.dataGridViewConsulta = new System.Windows.Forms.DataGridView();
-            this.btnConsultarClientes = new System.Windows.Forms.Button();
             this.ColClave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +38,7 @@ namespace BancoFinal
             this.ColTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSaldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnConsultarClientes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +55,7 @@ namespace BancoFinal
             // dataGridViewConsulta
             // 
             this.dataGridViewConsulta.AllowUserToAddRows = false;
+            this.dataGridViewConsulta.AllowUserToDeleteRows = false;
             this.dataGridViewConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColClave,
@@ -69,23 +70,6 @@ namespace BancoFinal
             this.dataGridViewConsulta.ReadOnly = true;
             this.dataGridViewConsulta.Size = new System.Drawing.Size(483, 207);
             this.dataGridViewConsulta.TabIndex = 3;
-            // 
-            // btnConsultarClientes
-            // 
-            this.btnConsultarClientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarClientes.FlatAppearance.BorderSize = 0;
-            this.btnConsultarClientes.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnConsultarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarClientes.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarClientes.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnConsultarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarClientes.Location = new System.Drawing.Point(151, 268);
-            this.btnConsultarClientes.Name = "btnConsultarClientes";
-            this.btnConsultarClientes.Size = new System.Drawing.Size(176, 31);
-            this.btnConsultarClientes.TabIndex = 24;
-            this.btnConsultarClientes.Text = "CONSULTAR";
-            this.btnConsultarClientes.UseVisualStyleBackColor = true;
-            this.btnConsultarClientes.Click += new System.EventHandler(this.btnConsultarClientes_Click);
             // 
             // ColClave
             // 
@@ -135,6 +119,23 @@ namespace BancoFinal
             this.ColSaldo.Name = "ColSaldo";
             this.ColSaldo.ReadOnly = true;
             this.ColSaldo.Width = 68;
+            // 
+            // btnConsultarClientes
+            // 
+            this.btnConsultarClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarClientes.FlatAppearance.BorderSize = 0;
+            this.btnConsultarClientes.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnConsultarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarClientes.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarClientes.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnConsultarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarClientes.Location = new System.Drawing.Point(151, 268);
+            this.btnConsultarClientes.Name = "btnConsultarClientes";
+            this.btnConsultarClientes.Size = new System.Drawing.Size(176, 31);
+            this.btnConsultarClientes.TabIndex = 24;
+            this.btnConsultarClientes.Text = "CONSULTAR";
+            this.btnConsultarClientes.UseVisualStyleBackColor = true;
+            this.btnConsultarClientes.Click += new System.EventHandler(this.btnConsultarClientes_Click);
             // 
             // ConsultarzonaAdminr
             // 
