@@ -98,5 +98,10 @@ namespace BancoFinal
             this.Close();
             MessageBox.Show("Se Cerro la Sesiòn");
         }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            ArbrirConsignarenMenu(new ConsultarDatosUsuario());
+        }
     }
 }

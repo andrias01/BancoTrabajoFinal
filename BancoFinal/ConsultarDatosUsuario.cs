@@ -16,6 +16,27 @@ namespace BancoFinal
         public ConsultarDatosUsuario()
         {
             InitializeComponent();
+            string fileName = "clientes.txt";
+            string fileUsuario = "UsuarioEnSesion.txt";
+            StreamReader reader = File.OpenText(fileName);
+            StreamReader reader2 = File.OpenText(fileUsuario);
+            string Cliente = reader2.ReadLine();
+            while (!reader.EndOfStream)
+            {
+                string lineaActual = reader.ReadLine();
+                char[] separador = { '&' };
+                string[] datos = lineaActual.Split(separador);
+                if (datos[1] == Cliente)
+                {
+                    textBoxClaveConsultaUsuario.Text = datos[0];
+                    textBoxNombreConsultaUsuario.Text = datos[1];
+                    textBoxApellidoConsultaUsuario.Text = datos[2];
+                    textBoxDireccionConsultaUsuario.Text = datos[3];
+                    textBoxTelefonoConsultaUsuario.Text = datos[4];
+                    textBoxEmailConsultaUsuario.Text= datos[5];
+                    textBoxSaldoConsultaUsuario.Text = datos[6];
+                }
+            }
         }
         public struct Cliente
         {
@@ -42,22 +63,49 @@ namespace BancoFinal
                 cliente.telefono = textBoxTelefonoConsultaUsuario.Text;
                 cliente.email = textBoxEmailConsultaUsuario.Text;
                 cliente.saldo = textBoxSaldoConsultaUsuario.Text;
-                //se define el nombre del archivo en el cual se almacenarán los datos del sistema
-                string fileName = "clientes.txt";
-                // esto inserta texto en un archivo existente, si el archivo no existe lo crea
-                StreamWriter writer = File.AppendText(fileName);
-                //escribe cada campo separado por el signo & de esta forma el split ayudará en la recuperación
-                writer.WriteLine("{0}&{1}&{2}&{3}&{4}&{5}&{6}", cliente.codigo, cliente.nombre, cliente.apellido,
-                    cliente.direccion, cliente.telefono, cliente.email, cliente.saldo);
-                writer.Close();
-                //textBoxClaveCreacion.Clear();
-                //textBoxNombreCreacion.Clear();
-                //textBoxApellidoCreacion.Clear();
-                //textBoxDireccionCreacion.Clear();
-                //textBoxTelefonoCreacion.Clear();
-                //textBoxEmailCreacion.Clear();
-                //textBoxSaldoCreacion.Clear();
+                try
+                {
+                    string fileName = "clientes.txt";
+                    string fileUsuario = "UsuarioEnSesion.txt";
+                    string fileCopia = "Copia_Clientes.txt";
+                    StreamReader reader = File.OpenText(fileName);
+                    StreamReader reader2 = File.OpenText(fileUsuario);
+                    StreamWriter writer = File.AppendText(fileCopia);
+                    string Cliente = reader2.ReadLine();
+                    int band = 0;
+                    while (!reader.EndOfStream)
+                    {
+                        string lineaActual = reader.ReadLine();
+                        char[] separador = { '&' };
+                        string[] datos = lineaActual.Split(separador);
+                        if (datos[1] == Cliente)
+                        {
+
+                            band = 1;
+                            writer.WriteLine(cliente.codigo+"&"+cliente.nombre+"&"+cliente.apellido+"&"+cliente.direccion+"&"+cliente.telefono+"&"+cliente.email+"&"+cliente.saldo);
+                        }
+                        else
+                        {
+                            writer.WriteLine(lineaActual);
+                        }
+                    }
+                    if (band == 0)
+                    {
+                        MessageBox.Show("NO se pudo hacer la actualización. intenta denuevo!");
+                    }
+                    
+                    MessageBox.Show("Actualización REALIZADA");
+                    reader.Close();
+                    reader2.Close();
+                    writer.Close();
+                    File.Replace(fileCopia, fileName, null, true);
+                }
+                catch (Exception z)
+                {
+                    MessageBox.Show("hubo un error" + z, "Error");
+                }
             }
+            
         }
     }
 }

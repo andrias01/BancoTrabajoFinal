@@ -31,16 +31,16 @@ namespace BancoFinal
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menuInicial));
             this.PanelVertical = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnsignOut = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnTransladar = new System.Windows.Forms.Button();
             this.btnRetirar = new System.Windows.Forms.Button();
             this.btnConsignar = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelTitulo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBoxUsuarioEnSesion = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnminimenu = new System.Windows.Forms.PictureBox();
             this.btnReacermenu = new System.Windows.Forms.PictureBox();
             this.btnmaximenu = new System.Windows.Forms.PictureBox();
@@ -48,8 +48,8 @@ namespace BancoFinal
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.InformacionPanel = new System.Windows.Forms.Panel();
             this.PanelVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.PanelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnReacermenu)).BeginInit();
@@ -73,6 +73,27 @@ namespace BancoFinal
             this.PanelVertical.Name = "PanelVertical";
             this.PanelVertical.Size = new System.Drawing.Size(199, 450);
             this.PanelVertical.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(140, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 112);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(140, 112);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
             // 
             // btnsignOut
             // 
@@ -106,6 +127,7 @@ namespace BancoFinal
             this.btnConsultar.TabIndex = 5;
             this.btnConsultar.Text = "CONSULTAR";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnTransladar
             // 
@@ -156,27 +178,6 @@ namespace BancoFinal
             this.btnConsignar.UseVisualStyleBackColor = true;
             this.btnConsignar.Click += new System.EventHandler(this.btnConsignar_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(140, 112);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(140, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 112);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // PanelTitulo
             // 
             this.PanelTitulo.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -195,17 +196,6 @@ namespace BancoFinal
             this.PanelTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelTitulo_Paint);
             this.PanelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitulo_MouseDown);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(47, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 24);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "USUARIO:";
-            // 
             // textBoxUsuarioEnSesion
             // 
             this.textBoxUsuarioEnSesion.BackColor = System.Drawing.SystemColors.Highlight;
@@ -217,6 +207,17 @@ namespace BancoFinal
             this.textBoxUsuarioEnSesion.ReadOnly = true;
             this.textBoxUsuarioEnSesion.Size = new System.Drawing.Size(263, 34);
             this.textBoxUsuarioEnSesion.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(47, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "USUARIO:";
             // 
             // btnminimenu
             // 
@@ -300,8 +301,8 @@ namespace BancoFinal
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menuInicial";
             this.PanelVertical.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.PanelTitulo.ResumeLayout(false);
             this.PanelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimenu)).EndInit();
