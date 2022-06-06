@@ -103,5 +103,15 @@ namespace BancoFinal
         {
             ArbrirConsignarenMenu(new ConsultarDatosUsuario());
         }
+
+        private void btnRetirar_Click(object sender, EventArgs e)
+        {
+            ArbrirConsignarenMenu(new RetirarUsuario());
+        }
+
+        private void btnTransladar_Click(object sender, EventArgs e)
+        {
+            ArbrirConsignarenMenu(new TransladarUsuario());
+        }
     }
 }

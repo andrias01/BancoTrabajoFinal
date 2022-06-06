@@ -144,6 +144,7 @@ namespace BancoFinal
             this.btnTransladar.TabIndex = 4;
             this.btnTransladar.Text = "TRANSLADAR";
             this.btnTransladar.UseVisualStyleBackColor = true;
+            this.btnTransladar.Click += new System.EventHandler(this.btnTransladar_Click);
             // 
             // btnRetirar
             // 
@@ -160,6 +161,7 @@ namespace BancoFinal
             this.btnRetirar.TabIndex = 3;
             this.btnRetirar.Text = "RETIRAR";
             this.btnRetirar.UseVisualStyleBackColor = true;
+            this.btnRetirar.Click += new System.EventHandler(this.btnRetirar_Click);
             // 
             // btnConsignar
             // 

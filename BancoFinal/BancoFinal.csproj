@@ -108,6 +108,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransladarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransladarUsuario.Designer.cs">
+      <DependentUpon>TransladarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ZonaAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RetirarUsuario.resx">
+      <DependentUpon>RetirarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransladarUsuario.resx">
+      <DependentUpon>TransladarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ZonaAdministrador.resx">
       <DependentUpon>ZonaAdministrador.cs</DependentUpon>
     </EmbeddedResource>

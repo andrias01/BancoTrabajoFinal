@@ -35,3 +35,6 @@ C:\Users\Usuario\Source\Repos\BancoTrabajoFinal\BancoFinal\obj\Debug\BancoFinal.
 C:\Users\Usuario\Source\Repos\BancoTrabajoFinal\BancoFinal\obj\Debug\BancoFinal.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Source\Repos\BancoTrabajoFinal\BancoFinal\obj\Debug\BancoFinal.exe
 C:\Users\Usuario\Source\Repos\BancoTrabajoFinal\BancoFinal\obj\Debug\BancoFinal.pdb
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.ConsultarDatosUsuario.resources
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.RetirarUsuario.resources
+C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.TransladarUsuario.resources

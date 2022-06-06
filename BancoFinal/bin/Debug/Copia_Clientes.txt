@@ -1,6 +1,0 @@
-12&Andres Mauricio&Velez Alcaraz&calle en la esquina&52368911111&julian@gmail.com&46000
-15&Milena&Barbosa&Calle&186161816&fsdfsd@fgf&100000
-123&Jhohann&Fernandes&calle crusando la otra&1651168&porhay@gmail.com&55000
-12&Andres Mauricio&Velez Alcaraz&calle en la esquina&523689111&julian@gmail.com&46000
-15&Milena&Barbosa&Calle&186161816&fsdfsd@fgf&100000
-123&Jhohann&Fernandes&calle crusando la otra&1651168&porhay@gmail.com&55000
