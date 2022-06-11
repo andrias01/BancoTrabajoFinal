@@ -200,7 +200,7 @@ namespace BancoFinal
             // 
             // textBoxUsuarioEnSesion
             // 
-            this.textBoxUsuarioEnSesion.BackColor = System.Drawing.SystemColors.Highlight;
+            this.textBoxUsuarioEnSesion.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.textBoxUsuarioEnSesion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxUsuarioEnSesion.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsuarioEnSesion.ForeColor = System.Drawing.Color.Black;

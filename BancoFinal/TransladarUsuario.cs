@@ -16,23 +16,23 @@ namespace BancoFinal
         public TransladarUsuario()
         {
             InitializeComponent();
-            string fileName = "clientes.txt";
-            string fileUsuario = "UsuarioEnSesion.txt";
-            StreamReader reader = File.OpenText(fileName);
-            StreamReader reader2 = File.OpenText(fileUsuario);
-            string Cliente = reader2.ReadLine();
-            while (!reader.EndOfStream)
-            {
-                string lineaActual = reader.ReadLine();
-                char[] separador = { '&' };
-                string[] datos = lineaActual.Split(separador);
-                if (datos[1] == Cliente)
-                {
-                    textBoxTransladarSaldoActual.Text = datos[6];
-                }
-            }
-            reader.Close();
-            reader2.Close();
+            //string fileName = "clientes.txt";
+            //string fileUsuario = "UsuarioEnSesion.txt";
+            //StreamReader reader = File.OpenText(fileName);
+            //StreamReader reader2 = File.OpenText(fileUsuario);
+            //string Cliente = reader2.ReadLine();
+            //while (!reader.EndOfStream)
+            //{
+            //    string lineaActual = reader.ReadLine();
+            //    char[] separador = { '&' };
+            //    string[] datos = lineaActual.Split(separador);
+            //    if (datos[1] == Cliente)
+            //    {
+            //        textBoxTransladarSaldoActual.Text = datos[6];
+            //    }
+            //}
+            //reader.Close();
+            //reader2.Close();
         }
 
         private void btnRetirarDinero_Click(object sender, EventArgs e)
@@ -41,6 +41,13 @@ namespace BancoFinal
                 MessageBox.Show("Debe Digitar todos los campos");
             else
             {
+                ClientesSingleton TransferirDinero = ClientesSingleton.Getinstancia();
+                string fileName = "clientes.txt";
+                string fileCopia = "Copia_Clientes.txt";
+                string ValorATranferir = textBoxTransValorATransladar.Text;
+                string PersonaAtransferir = textBoxTransPersonaRecibe.Text;
+                TransferirDinero.DatosClienteActual(TransferirDinero.Nombre);
+                TransferirDinero.Archivo(fileName, fileCopia, TransferirDinero.Nombre, null, ValorATranferir, ValorATranferir, PersonaAtransferir, null, null);
                 try
                 {
                     string fileName = "clientes.txt";

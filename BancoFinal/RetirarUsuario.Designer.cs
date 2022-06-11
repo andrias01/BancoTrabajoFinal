@@ -92,11 +92,11 @@ namespace BancoFinal
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(63, 214);
+            this.label3.Location = new System.Drawing.Point(75, 214);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(253, 24);
+            this.label3.Size = new System.Drawing.Size(203, 24);
             this.label3.TabIndex = 25;
-            this.label3.Text = "VALOR A CONSIGNAR : ";
+            this.label3.Text = "VALOR A RETIRAR : ";
             // 
             // textBoxRetirarValorARetirar
             // 

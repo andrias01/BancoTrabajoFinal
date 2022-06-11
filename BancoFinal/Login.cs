@@ -95,42 +95,12 @@ namespace BancoFinal
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            ZonaAdministrador formularioUsuarios = new ZonaAdministrador();
-            try
-            {
-                string fileName = "clientes.txt";
-                string fileUsuario = "UsuarioEnSesion.txt";
-                StreamReader reader = File.OpenText(fileName);
-                StreamWriter writer = File.CreateText(fileUsuario);
-                string Cliente = textBoxUsuario.Text;
-                string Contraseña = textBoxContraseña.Text;
-                int band = 0;
-                while (!reader.EndOfStream)
-                {
-                    string lineaActual = reader.ReadLine();
-                    char[] separador = {'&'};
-                    string[] datos = lineaActual.Split(separador);
-                    if (datos[0] == Contraseña && datos[1] == Cliente)
-                    {
-                        band = 1;
-                        writer.WriteLine(datos[1]);
-                        writer.Close();
-                        menuInicial formulario2 = new menuInicial();
-                        formulario2.Show();
-                        MessageBox.Show($"Inicio SESION {0}",Cliente);
-                    }
-                }
-                if (band==0)
-                {
-                    MessageBox.Show("NO se puede inciar secion tienes un error en el nombre o contraseña. intenta denuevo!");
-                }
-                reader.Close();
-            }
-            catch (Exception z)
-            {
-                MessageBox.Show("hubo un error" + z, "Error");
-            }
-            
+            ClientesSingleton guardarDatosClienteSesion = ClientesSingleton.Getinstancia();
+            string fileName = "clientes.txt";
+            guardarDatosClienteSesion.Nombre = textBoxUsuario.Text;
+            guardarDatosClienteSesion.Clave = textBoxContraseña.Text;
+            guardarDatosClienteSesion.Archivo(fileName, null, guardarDatosClienteSesion.Nombre, textBoxContraseña.Text, null,null,null,null,null);
+            guardarDatosClienteSesion.DatosClienteActual(guardarDatosClienteSesion.Nombre);
         }
 
         private void btnAdministrador_Click(object sender, EventArgs e)

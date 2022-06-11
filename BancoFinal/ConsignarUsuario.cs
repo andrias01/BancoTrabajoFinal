@@ -38,52 +38,12 @@ namespace BancoFinal
 
         private void btnConsignarAccion_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string fileName = "clientes.txt";
-                string fileUsuario = "UsuarioEnSesion.txt";
-                string fileCopia = "Copia_Clientes.txt";
-                StreamReader reader = File.OpenText(fileName);
-                StreamReader reader2 = File.OpenText(fileUsuario);
-                StreamWriter writer = File.AppendText(fileCopia);
-                string Cliente = reader2.ReadLine();
-                string ValorAConsignar = textBoxConsignar.Text;
-                int ValorAConsignarNumero = int.Parse(ValorAConsignar);
-                int band = 0;
-                while (!reader.EndOfStream)
-                {
-                    string lineaActual = reader.ReadLine();
-                    char[] separador = { '&' };
-                    string[] datos = lineaActual.Split(separador);
-                    if (datos[1] == Cliente)
-                    {
-                        int SaldoNumero = int.Parse(datos[6]);
-                        int suma = SaldoNumero + ValorAConsignarNumero;
-                        string sumaRealizada = suma.ToString();
-                        band = 1;
-                        writer.WriteLine(datos[0]+"&"+datos[1]+ "&" + datos[2]+ "&" + datos[3]+ "&" + datos[4]+ "&" + datos[5]+ "&"+sumaRealizada);
-                    }
-                    else
-                    {
-                        writer.WriteLine(lineaActual);
-                    }
-                }
-                if (band == 0)
-                {
-                    MessageBox.Show("NO se puedo hacer la consignaciòn. intenta denuevo!");
-                }
-                else
-                    textBoxConsignar.Clear();
-                    MessageBox.Show("Consignaciòn REALIZADA");
-                reader.Close();
-                reader2.Close();
-                writer.Close();
-                File.Replace(fileCopia, fileName, null, true);
-            }
-            catch (Exception z)
-            {
-                MessageBox.Show("hubo un error" + z, "Error");
-            }
+            ClientesSingleton ConsiganarSegunElCliente = ClientesSingleton.Getinstancia();
+            string fileName = "clientes.txt";
+            string fileCopia = "Copia_Clientes.txt";
+            string NombreUsuario = ConsiganarSegunElCliente.Nombre;
+            string ValorAConsignar = textBoxConsignar.Text;
+            ConsiganarSegunElCliente.Archivo(fileName,fileCopia,NombreUsuario,null,ValorAConsignar,null,null,null,null);
         }
     }
 }

@@ -67,9 +67,9 @@ namespace BancoFinal
             this.btnRetirarDinero.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetirarDinero.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnRetirarDinero.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRetirarDinero.Location = new System.Drawing.Point(339, 306);
+            this.btnRetirarDinero.Location = new System.Drawing.Point(298, 306);
             this.btnRetirarDinero.Name = "btnRetirarDinero";
-            this.btnRetirarDinero.Size = new System.Drawing.Size(192, 62);
+            this.btnRetirarDinero.Size = new System.Drawing.Size(233, 62);
             this.btnRetirarDinero.TabIndex = 46;
             this.btnRetirarDinero.Text = "TRANSFERIR";
             this.btnRetirarDinero.UseVisualStyleBackColor = true;

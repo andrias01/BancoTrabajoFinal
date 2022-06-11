@@ -17,20 +17,14 @@ namespace BancoFinal
         public menuInicial()
         {
             InitializeComponent();
-            string fileName = "UsuarioEnSesion.txt";
-            StreamReader reader = File.OpenText(fileName);
-            string lineaActual = reader.ReadLine();
-            textBoxUsuarioEnSesion.Text = lineaActual;
-            reader.Close();
+            ClientesSingleton NombreEnPantalla = ClientesSingleton.Getinstancia();
+            NombreEnPantalla.DatosClienteActual(NombreEnPantalla.Nombre);
+            textBoxUsuarioEnSesion.Text = NombreEnPantalla.Nombre;
         }
-        
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
-
-
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (PanelVertical.Width == 199)
@@ -77,7 +71,7 @@ namespace BancoFinal
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void ArbrirConsignarenMenu(object Formhijo)
+        private void AbrirVentanas(object Formhijo)
         {
             if (this.InformacionPanel.Controls.Count>0)
                 this.InformacionPanel.Controls.RemoveAt(0);
@@ -90,7 +84,7 @@ namespace BancoFinal
         }
         private void btnConsignar_Click(object sender, EventArgs e)
         {
-            ArbrirConsignarenMenu(new ConsignarUsuario());
+            AbrirVentanas(new ConsignarUsuario());
         }
 
         private void btnsignOut_Click(object sender, EventArgs e)
@@ -101,17 +95,17 @@ namespace BancoFinal
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            ArbrirConsignarenMenu(new ConsultarDatosUsuario());
+            AbrirVentanas(new ConsultarDatosUsuario());
         }
 
         private void btnRetirar_Click(object sender, EventArgs e)
         {
-            ArbrirConsignarenMenu(new RetirarUsuario());
+            AbrirVentanas(new RetirarUsuario());
         }
 
         private void btnTransladar_Click(object sender, EventArgs e)
         {
-            ArbrirConsignarenMenu(new TransladarUsuario());
+            AbrirVentanas(new TransladarUsuario());
         }
     }
 }
