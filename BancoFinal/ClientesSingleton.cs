@@ -38,7 +38,6 @@ namespace BancoFinal
             Archivo(fileName, null, NOmbreUsuario, null, null, null, null, null, null);
         }
         //Cada variable tentra un metodo que permitira tomar los datos y guardarlos
-
         public void entrarASecion(string NOmbre)
         {
             menuInicial formulario2 = new menuInicial();
@@ -46,9 +45,13 @@ namespace BancoFinal
             MessageBox.Show($"Inicio SESION {0}", NOmbre);
         }
         //Mensajes Sino se Cumple
+        public void EliminarsiNO()
+        {
+            MessageBox.Show("El cliente no se Encuentra en la Base de Datos");
+        }
         public void RerirarsiNO()
         {
-            MessageBox.Show("NO se puedo hacer el retiro no tiene saldo!");
+            MessageBox.Show("NO se puede hacer el retiro no tienes suficiente Saldo!");
         }
         public void ConsignarsiNO()
         {
@@ -58,33 +61,33 @@ namespace BancoFinal
         {
             MessageBox.Show("NO se puede inciar secion tienes un error en el nombre o contraseña. intenta denuevo!");
         }
-        public void Archivo(string ARchivoClientes,string ARchivoCopia,string NOmbre, string COntraseña,string VAlorConsignar,string VAlorRerirar,string PErsonaAtranferir, string hola3,string hola4)
+        //Metodo Principal de lectura y escritura de archivos
+
+    public void Archivo(string ARchivoClientes,string ARchivoCopia,string NOmbre, string COntraseña,string VAlorConsignar,string VAlorRerirar,string PErsonaAtranferir, string VAlorAcambiar,string hola4)
         {
             StreamReader reader = File.OpenText(ARchivoClientes);
             StreamWriter writer = null;
             int ValorAConsignarNumero = 0;
             int ValorARerirarNumero = 0;
-            //int ValorAtransferirNumero = 0;
             if (ARchivoCopia != null) writer = File.AppendText(ARchivoCopia);
             if (VAlorConsignar != null) ValorAConsignarNumero = int.Parse(VAlorConsignar);
             if (VAlorRerirar != null) ValorARerirarNumero = int.Parse(VAlorRerirar);
-            //if (VAlorTRansferir != null) ValorAtransferirNumero = int.Parse(VAlorTRansferir);
             try
             {
-                string siNoCual="";
+                string siNoCual = "";
                 int band = 0;
                 while (!reader.EndOfStream)
                 {
                     string lineaActual = reader.ReadLine();
                     char[] separador = { '&' };
                     string[] datos = lineaActual.Split(separador);
-                    if (datos[0] == COntraseña && datos[1] == NOmbre&& writer == null&&reader!=null)
+                    if (datos[0] == COntraseña && datos[1] == NOmbre && writer == null && reader != null)
                     {
                         siNoCual = "Sesion";
                         band = 1;
                         entrarASecion(NOmbre);
                     }
-                    if (datos[1] == NOmbre && writer ==null)
+                    if (datos[1] == NOmbre && writer == null)
                     {
                         clave = datos[0];
                         nombre = datos[1];
@@ -119,47 +122,42 @@ namespace BancoFinal
                             if (datos[1] == NOmbre && writer != null && VAlorRerirar != null && SaldoNumero > 0)
                             {
                                 int suma = SaldoNumero - ValorARerirarNumero;
-                                string sumaRealizada = suma.ToString();
-                                band = 1;
-                                siNoCual = "RetirarUsuario";
-                                writer.WriteLine(datos[0] + "&" + datos[1] + "&" + datos[2] + "&" + datos[3] + "&" + datos[4] + "&" + datos[5] + "&" + sumaRealizada);
-                                MessageBox.Show("Retiro REALIZADO");
+                                if (suma<0)
+                                {
+                                    writer.WriteLine(lineaActual);
+                                    siNoCual = "RetirarUsuario";
+                                }
+                                else
+                                {
+                                    string sumaRealizada = suma.ToString();
+                                    band = 1;
+                                    writer.WriteLine(datos[0] + "&" + datos[1] + "&" + datos[2] + "&" + datos[3] + "&" + datos[4] + "&" + datos[5] + "&" + sumaRealizada);
+                                    MessageBox.Show("Retiro REALIZADO");
+                                }
                             }
-                            else
-                            {
-                                writer.WriteLine(lineaActual);
-                            }
-                        } 
+                            else writer.WriteLine(lineaActual);
+                            siNoCual = "RetirarUsuario";
+                        }
                     }
-                    if (writer != null && VAlorConsignar != null && VAlorRerirar != null)
+                    if (VAlorAcambiar == "ELIMINAR")
                     {
-                        int SaldoNumero = int.Parse(datos[6]);
-                        if (SaldoNumero > 0)
+                        if (datos[0] == NOmbre || datos[1] == NOmbre || datos[2] == NOmbre)
                         {
-                            if (datos[1] == NOmbre && writer != null && VAlorRerirar != null && SaldoNumero > 0)
-                            {
-                                int suma = SaldoNumero - ValorARerirarNumero;
-                                string sumaRealizada = suma.ToString();
-                                band = 1;
-                                //siNoCual = "RetirarUsuario";
-                                writer.WriteLine(datos[0] + "&" + datos[1] + "&" + datos[2] + "&" + datos[3] + "&" + datos[4] + "&" + datos[5] + "&" + sumaRealizada);
-                                MessageBox.Show("Retiro REALIZADO");
-                            }
-                            else
-                            {
-                                writer.WriteLine(lineaActual);
-                            }
+                            band = 1;
+                            MessageBox.Show("El cliente ha sido Borrado");
                         }
                         else
                         {
-                            siNoCual = "RetirarUsuario";
+                            writer.WriteLine(lineaActual);
                         }
+                        siNoCual = "Eliminar";
                     }
                 }
                 if (band == 0)
                 {
+                    if (siNoCual == "Eliminar") EliminarsiNO();
                     if (siNoCual == "Consignar") ConsignarsiNO();
-                    if (siNoCual=="Sesion") entrarASecionsiNO();
+                    if (siNoCual == "Sesion") entrarASecionsiNO();
                     if (siNoCual == "RetirarUsuario") RerirarsiNO();
                 }
                 reader.Close();
@@ -168,7 +166,6 @@ namespace BancoFinal
                     writer.Close();
                     File.Replace(ARchivoCopia, ARchivoClientes, null, true);
                 }
-                
             }
             catch (Exception z)
             {

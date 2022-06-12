@@ -25,30 +25,32 @@ namespace BancoFinal
             //este es el nombre de un archivo de copia
             string fileCopia = "copia_clientes.txt";
             // esto inserta texto en un archivo existente, si el archivo no existe lo crea
-            StreamWriter writer = File.AppendText(fileCopia);
-            StreamReader reader = File.OpenText(fileName);
-            string Cliente =textBoxEliminarCliente.Text;
-            int band = 0;
-            while (!reader.EndOfStream)
-            {
-                string lineaActual = reader.ReadLine();
-                string[] datos = lineaActual.Split('&');
-                if (datos[0] == Cliente|| datos[1] == Cliente || datos[2] == Cliente)
-                {
-                    band = 1;
-                    MessageBox.Show("El cliente ha sido Borrado");
-                }
-                else
-                {
-                    writer.WriteLine(lineaActual);
-                }
-            }
-            if (band == 0)
-                MessageBox.Show("El cliente no se Encuentra en la Base de Datos");
-            writer.Close();
-            reader.Close();
-            File.Replace(fileCopia, fileName, null, true);
-
+            string Cliente = textBoxEliminarCliente.Text;
+            ClientesSingleton ELiminar = ClientesSingleton.Getinstancia();
+            ELiminar.Archivo(fileName, fileCopia, Cliente, null, null, null, null, "ELIMINAR", null);
+            //StreamWriter writer = File.AppendText(fileCopia);
+            //StreamReader reader = File.OpenText(fileName);
+            //string Cliente =textBoxEliminarCliente.Text;
+            //int band = 0;
+            //while (!reader.EndOfStream)
+            //{
+            //    string lineaActual = reader.ReadLine();
+            //    string[] datos = lineaActual.Split('&');
+            //    if (datos[0] == Cliente|| datos[1] == Cliente || datos[2] == Cliente)
+            //    {
+            //        band = 1;
+            //        MessageBox.Show("El cliente ha sido Borrado");
+            //    }
+            //    else
+            //    {
+            //        writer.WriteLine(lineaActual);
+            //    }
+            //}
+            //if (band == 0)
+            //    MessageBox.Show("El cliente no se Encuentra en la Base de Datos");
+            //writer.Close();
+            //reader.Close();
+            //File.Replace(fileCopia, fileName, null, true);
         }
     }
 }

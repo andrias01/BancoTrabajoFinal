@@ -32,12 +32,12 @@ namespace BancoFinal
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RetirarUsuario));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBoxRetirarSaldoActual = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxRetirarValorARetirar = new System.Windows.Forms.TextBox();
             this.btnRetirarDinero = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.labelRetirarSaldoActual = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,18 +63,6 @@ namespace BancoFinal
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            // 
-            // textBoxRetirarSaldoActual
-            // 
-            this.textBoxRetirarSaldoActual.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxRetirarSaldoActual.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxRetirarSaldoActual.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRetirarSaldoActual.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxRetirarSaldoActual.Location = new System.Drawing.Point(232, 130);
-            this.textBoxRetirarSaldoActual.Name = "textBoxRetirarSaldoActual";
-            this.textBoxRetirarSaldoActual.ReadOnly = true;
-            this.textBoxRetirarSaldoActual.Size = new System.Drawing.Size(263, 34);
-            this.textBoxRetirarSaldoActual.TabIndex = 23;
             // 
             // label2
             // 
@@ -137,18 +125,27 @@ namespace BancoFinal
             this.label4.TabIndex = 39;
             this.label4.Text = "NOTA: Colocar el valor \r\na retirar sin puntos \r\ny sin signo de pesos ";
             // 
+            // labelRetirarSaldoActual
+            // 
+            this.labelRetirarSaldoActual.AutoSize = true;
+            this.labelRetirarSaldoActual.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRetirarSaldoActual.Location = new System.Drawing.Point(232, 128);
+            this.labelRetirarSaldoActual.Name = "labelRetirarSaldoActual";
+            this.labelRetirarSaldoActual.Size = new System.Drawing.Size(0, 36);
+            this.labelRetirarSaldoActual.TabIndex = 40;
+            // 
             // RetirarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(601, 400);
+            this.Controls.Add(this.labelRetirarSaldoActual);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnRetirarDinero);
             this.Controls.Add(this.textBoxRetirarValorARetirar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxRetirarSaldoActual);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -164,11 +161,11 @@ namespace BancoFinal
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBoxRetirarSaldoActual;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxRetirarValorARetirar;
         private System.Windows.Forms.Button btnRetirarDinero;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelRetirarSaldoActual;
     }
 }

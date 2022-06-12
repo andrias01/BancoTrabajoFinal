@@ -41,7 +41,6 @@ namespace BancoFinal
             this.textBoxClaveCreacion = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxNombreCreacion = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBoxApellidoCreacion = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBoxDireccionCreacion = new System.Windows.Forms.TextBox();
@@ -53,20 +52,21 @@ namespace BancoFinal
             this.textBoxSaldoCreacion = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnGuardarCrearAdmin = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tituloCrear
             // 
             this.tituloCrear.AutoSize = true;
             this.tituloCrear.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tituloCrear.Location = new System.Drawing.Point(134, 9);
+            this.tituloCrear.Location = new System.Drawing.Point(151, 5);
             this.tituloCrear.Name = "tituloCrear";
             this.tituloCrear.Size = new System.Drawing.Size(208, 33);
             this.tituloCrear.TabIndex = 0;
@@ -96,7 +96,7 @@ namespace BancoFinal
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 103);
+            this.label3.Location = new System.Drawing.Point(67, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 21);
             this.label3.TabIndex = 3;
@@ -126,7 +126,7 @@ namespace BancoFinal
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(94, 205);
+            this.label6.Location = new System.Drawing.Point(94, 207);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 21);
             this.label6.TabIndex = 6;
@@ -136,7 +136,7 @@ namespace BancoFinal
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(89, 240);
+            this.label7.Location = new System.Drawing.Point(89, 243);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 21);
             this.label7.TabIndex = 7;
@@ -170,21 +170,10 @@ namespace BancoFinal
             this.textBoxNombreCreacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombreCreacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombreCreacion.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxNombreCreacion.Location = new System.Drawing.Point(157, 67);
+            this.textBoxNombreCreacion.Location = new System.Drawing.Point(157, 71);
             this.textBoxNombreCreacion.Name = "textBoxNombreCreacion";
             this.textBoxNombreCreacion.Size = new System.Drawing.Size(263, 20);
             this.textBoxNombreCreacion.TabIndex = 10;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(157, 81);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(263, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
             // 
             // textBoxApellidoCreacion
             // 
@@ -192,7 +181,7 @@ namespace BancoFinal
             this.textBoxApellidoCreacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxApellidoCreacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxApellidoCreacion.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxApellidoCreacion.Location = new System.Drawing.Point(157, 103);
+            this.textBoxApellidoCreacion.Location = new System.Drawing.Point(157, 105);
             this.textBoxApellidoCreacion.Name = "textBoxApellidoCreacion";
             this.textBoxApellidoCreacion.Size = new System.Drawing.Size(263, 20);
             this.textBoxApellidoCreacion.TabIndex = 12;
@@ -201,7 +190,7 @@ namespace BancoFinal
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(157, 117);
+            this.pictureBox3.Location = new System.Drawing.Point(157, 116);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(263, 20);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -214,7 +203,7 @@ namespace BancoFinal
             this.textBoxDireccionCreacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDireccionCreacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDireccionCreacion.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxDireccionCreacion.Location = new System.Drawing.Point(157, 138);
+            this.textBoxDireccionCreacion.Location = new System.Drawing.Point(157, 131);
             this.textBoxDireccionCreacion.Name = "textBoxDireccionCreacion";
             this.textBoxDireccionCreacion.Size = new System.Drawing.Size(263, 20);
             this.textBoxDireccionCreacion.TabIndex = 14;
@@ -223,7 +212,7 @@ namespace BancoFinal
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(157, 153);
+            this.pictureBox4.Location = new System.Drawing.Point(157, 147);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(263, 20);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -236,7 +225,7 @@ namespace BancoFinal
             this.textBoxTelefonoCreacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTelefonoCreacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefonoCreacion.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxTelefonoCreacion.Location = new System.Drawing.Point(157, 168);
+            this.textBoxTelefonoCreacion.Location = new System.Drawing.Point(157, 170);
             this.textBoxTelefonoCreacion.Name = "textBoxTelefonoCreacion";
             this.textBoxTelefonoCreacion.Size = new System.Drawing.Size(263, 20);
             this.textBoxTelefonoCreacion.TabIndex = 16;
@@ -245,7 +234,7 @@ namespace BancoFinal
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(157, 182);
+            this.pictureBox5.Location = new System.Drawing.Point(157, 184);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(263, 20);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -258,7 +247,7 @@ namespace BancoFinal
             this.textBoxEmailCreacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEmailCreacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmailCreacion.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxEmailCreacion.Location = new System.Drawing.Point(157, 205);
+            this.textBoxEmailCreacion.Location = new System.Drawing.Point(157, 206);
             this.textBoxEmailCreacion.Name = "textBoxEmailCreacion";
             this.textBoxEmailCreacion.Size = new System.Drawing.Size(263, 20);
             this.textBoxEmailCreacion.TabIndex = 18;
@@ -267,7 +256,7 @@ namespace BancoFinal
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(157, 219);
+            this.pictureBox6.Location = new System.Drawing.Point(157, 220);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(263, 20);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -280,7 +269,7 @@ namespace BancoFinal
             this.textBoxSaldoCreacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSaldoCreacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSaldoCreacion.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxSaldoCreacion.Location = new System.Drawing.Point(157, 240);
+            this.textBoxSaldoCreacion.Location = new System.Drawing.Point(157, 241);
             this.textBoxSaldoCreacion.Name = "textBoxSaldoCreacion";
             this.textBoxSaldoCreacion.Size = new System.Drawing.Size(263, 20);
             this.textBoxSaldoCreacion.TabIndex = 20;
@@ -289,7 +278,7 @@ namespace BancoFinal
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(157, 254);
+            this.pictureBox7.Location = new System.Drawing.Point(157, 255);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(263, 20);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -312,6 +301,17 @@ namespace BancoFinal
             this.btnGuardarCrearAdmin.Text = "GUARDAR";
             this.btnGuardarCrearAdmin.UseVisualStyleBackColor = true;
             this.btnGuardarCrearAdmin.Click += new System.EventHandler(this.btnGuardarCrearAdmin_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(157, 85);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(263, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // CrearAdmin
             // 
@@ -347,12 +347,12 @@ namespace BancoFinal
             this.Text = "CrearAdmin";
             this.Load += new System.EventHandler(this.CrearAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,7 +371,6 @@ namespace BancoFinal
         private System.Windows.Forms.TextBox textBoxClaveCreacion;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBoxNombreCreacion;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBoxApellidoCreacion;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox textBoxDireccionCreacion;
@@ -383,5 +382,6 @@ namespace BancoFinal
         private System.Windows.Forms.TextBox textBoxSaldoCreacion;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button btnGuardarCrearAdmin;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

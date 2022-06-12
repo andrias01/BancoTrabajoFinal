@@ -26,7 +26,7 @@ namespace BancoFinal
             string ValorARetirar = textBoxRetirarValorARetirar.Text;
             ParaRetirar.Archivo(fileName,fileCopia,ParaRetirar.Nombre,ParaRetirar.Clave,null,ValorARetirar,null,null,null);
             ParaRetirar.DatosClienteActual(ParaRetirar.Nombre);
-            textBoxRetirarSaldoActual.Text = ParaRetirar.Saldo.ToString();
+            labelRetirarSaldoActual.Text = ParaRetirar.Saldo.ToString();
         }
     }
 }

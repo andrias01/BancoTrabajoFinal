@@ -16,7 +16,6 @@ namespace BancoFinal
         {
             InitializeComponent();
         }
-
         private void CerrarZonaAdmin_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -36,23 +35,19 @@ namespace BancoFinal
         {
             ArbrirConsignarenMenuZonaAdmin(new ConsultarzonaAdminr());
         }
-
         private void btnCrearZonaAdmin_Click(object sender, EventArgs e)
         {
             ArbrirConsignarenMenuZonaAdmin(new CrearAdmin());
         }
-
         private void btnEliminarzonaAdmin_Click(object sender, EventArgs e)
         {
             ArbrirConsignarenMenuZonaAdmin(new EliminarAdmin());
         }
-
         private void btnSingout_Click(object sender, EventArgs e)
         {
             this.Close();
             MessageBox.Show("Se Cerro la seciòn");
         }
-
         private void btnModificarZonaAdmin_Click(object sender, EventArgs e)
         {
             ArbrirConsignarenMenuZonaAdmin(new ModificarAdmin());

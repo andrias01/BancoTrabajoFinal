@@ -17,77 +17,74 @@ namespace BancoFinal
         {
             InitializeComponent();
         }
-
         private void btbBuscarDatosModificarClientes_Click(object sender, EventArgs e)
-        {
-            //este es el nombre del archivo que administra los clientes
-            string fileName = "clientes.txt";
-            //este es el nombre de un archivo de copia
-            //string fileCopia = "copia_clientes.txt";
-            // esto inserta texto en un archivo existente, si el archivo no existe lo crea
-            //StreamWriter writer = File.AppendText(fileCopia);
-            StreamReader reader = File.OpenText(fileName);
-            string Cliente = textBoxModificarCliente.Text;
-            int band = 0;
-            while (!reader.EndOfStream)
-            {
-                string lineaActual = reader.ReadLine();
-                string[] datos = lineaActual.Split('&');
-                if (datos[0] == Cliente || datos[1] == Cliente || datos[2] == Cliente)
-                {
-                    band = 1;
-                    dataGridViewModificar.Rows.Clear();
-                    //StreamReader archivo = new StreamReader("clientes.txt");
-                    string texto = lineaActual;
-                    string[] leer = texto.Split('&');
-                    dataGridViewModificar.Rows.Add(leer[0], leer[1], leer[2], leer[3], leer[4], leer[5], leer[6]);
-                }
-            }
-            if (band == 0)
-                MessageBox.Show("El cliente no se Encuentra en la Base de Datos");
-            reader.Close();
+        {            
+            LectorArchivo("BUscar", "clientes.txt",null);
         }
-
         private void btbGuardarDatosModificarClientes_Click(object sender, EventArgs e)
         {
-            //este es el nombre del archivo que administra los clientes
-            string fileName = "clientes.txt";
-            //este es el nombre de un archivo de copia
-            string fileCopia = "copia_clientes.txt";
-            // esto inserta texto en un archivo existente, si el archivo no existe lo crea
-            StreamWriter writer = File.AppendText(fileCopia);
-            StreamReader reader = File.OpenText(fileName);
-            string Cliente =textBoxModificarCliente.Text;
+            LectorArchivo("MOdificar", "clientes.txt", "copia_clientes.txt");           
+        }
+        public void LectorArchivo (string buscar,string archivo, string copia)
+        {
+            string nombre = textBoxModificarCliente.Text;
+            StreamReader reader = File.OpenText(archivo);
+            StreamWriter writer = null;
+            if (copia != null) writer = File.AppendText(copia);
             int band = 0;
             while (!reader.EndOfStream)
             {
                 string lineaActual = reader.ReadLine();
                 string[] datos = lineaActual.Split('&');
-                if (datos[0] == Cliente || datos[1] == Cliente || datos[2] == Cliente)
+                if (buscar == "BUscar" && copia == null)
                 {
-                    band = 1;
-                    MessageBox.Show("El cliente ha sido Modificado");
-                    string clave, nombre, apellido, direccion, telefono, email, saldo;
-                    clave = dataGridViewModificar.Rows[0].Cells[0].Value.ToString();
-                    nombre = dataGridViewModificar.Rows[0].Cells[1].Value.ToString();
-                    apellido = dataGridViewModificar.Rows[0].Cells[2].Value.ToString();
-                    direccion = dataGridViewModificar.Rows[0].Cells[3].Value.ToString();
-                    telefono = dataGridViewModificar.Rows[0].Cells[4].Value.ToString();
-                    email = dataGridViewModificar.Rows[0].Cells[5].Value.ToString();
-                    saldo = dataGridViewModificar.Rows[0].Cells[6].Value.ToString();
-                    writer.WriteLine(clave + "&" + nombre + "&" + apellido + "&" + direccion + "&" + telefono + "&" + email + "&" + saldo);
-
+                    if (datos[0] == nombre || datos[1] == nombre || datos[2] == nombre)
+                    {
+                        band = 1;
+                        dataGridViewModificar.Rows.Clear();
+                        string texto = lineaActual;
+                        string[] leer = texto.Split('&');
+                        dataGridViewModificar.Rows.Add(leer[0], leer[1], leer[2], leer[3], leer[4], leer[5], leer[6]);
+                    }
                 }
-                else
+                    
+                if (buscar == "MOdificar" && copia != null)
                 {
-                    writer.WriteLine(lineaActual);
+                    if (datos[0] == nombre || datos[1] == nombre || datos[2] == nombre)
+                    {
+                        band = 1;
+                        MessageBox.Show("El cliente ha sido Modificado");
+                        string clave, nombree, apellido, direccion, telefono, email, saldo;
+                        clave = dataGridViewModificar.Rows[0].Cells[0].Value.ToString();
+                        nombree = dataGridViewModificar.Rows[0].Cells[1].Value.ToString();
+                        apellido = dataGridViewModificar.Rows[0].Cells[2].Value.ToString();
+                        direccion = dataGridViewModificar.Rows[0].Cells[3].Value.ToString();
+                        telefono = dataGridViewModificar.Rows[0].Cells[4].Value.ToString();
+                        email = dataGridViewModificar.Rows[0].Cells[5].Value.ToString();
+                        saldo = dataGridViewModificar.Rows[0].Cells[6].Value.ToString();
+                        writer.WriteLine(clave + "&" + nombree + "&" + apellido + "&" + direccion + "&" + telefono + "&" + email + "&" + saldo);
+                    }
+                    else
+                    {
+                        writer.WriteLine(lineaActual);
+                    }
                 }
             }
             if (band == 0)
-                MessageBox.Show("El cliente no se Encuentra en la Base de Datos");
-            writer.Close();
+                if (buscar == "BUscar") Sino("BUscar");
+                else Sino("MOdificar");
             reader.Close();
-            File.Replace(fileCopia, fileName, null, true);
+            if (copia != null)
+            {
+                writer.Close();
+                File.Replace(copia, archivo, null, true);
+            }
+            
+        }
+        public void Sino(string sinoQue)
+        {
+            if (sinoQue == "BUscar") MessageBox.Show("El cliente no se Encuentra en la Base de Datos");
+            if (sinoQue == "MOdificar") MessageBox.Show("No se pudo modificar");
         }
     }
 }

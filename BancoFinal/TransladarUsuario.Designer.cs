@@ -35,13 +35,13 @@ namespace BancoFinal
             this.textBoxTransValorATransladar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxTransladarSaldoActual = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBoxTransPersonaRecibe = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.labelTransladarSaldoActual = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -81,7 +81,7 @@ namespace BancoFinal
             this.textBoxTransValorATransladar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTransValorATransladar.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTransValorATransladar.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxTransValorATransladar.Location = new System.Drawing.Point(270, 190);
+            this.textBoxTransValorATransladar.Location = new System.Drawing.Point(268, 200);
             this.textBoxTransValorATransladar.Name = "textBoxTransValorATransladar";
             this.textBoxTransValorATransladar.Size = new System.Drawing.Size(263, 34);
             this.textBoxTransValorATransladar.TabIndex = 45;
@@ -107,18 +107,6 @@ namespace BancoFinal
             this.label2.Size = new System.Drawing.Size(163, 24);
             this.label2.TabIndex = 43;
             this.label2.Text = "SALDO ACTUAL";
-            // 
-            // textBoxTransladarSaldoActual
-            // 
-            this.textBoxTransladarSaldoActual.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxTransladarSaldoActual.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTransladarSaldoActual.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTransladarSaldoActual.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxTransladarSaldoActual.Location = new System.Drawing.Point(231, 150);
-            this.textBoxTransladarSaldoActual.Name = "textBoxTransladarSaldoActual";
-            this.textBoxTransladarSaldoActual.ReadOnly = true;
-            this.textBoxTransladarSaldoActual.Size = new System.Drawing.Size(263, 34);
-            this.textBoxTransladarSaldoActual.TabIndex = 42;
             // 
             // pictureBox1
             // 
@@ -147,7 +135,7 @@ namespace BancoFinal
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(270, 214);
+            this.pictureBox2.Location = new System.Drawing.Point(268, 227);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(263, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -158,7 +146,7 @@ namespace BancoFinal
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(268, 264);
+            this.pictureBox3.Location = new System.Drawing.Point(268, 273);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(263, 20);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -171,7 +159,7 @@ namespace BancoFinal
             this.textBoxTransPersonaRecibe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTransPersonaRecibe.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTransPersonaRecibe.ForeColor = System.Drawing.Color.DimGray;
-            this.textBoxTransPersonaRecibe.Location = new System.Drawing.Point(268, 240);
+            this.textBoxTransPersonaRecibe.Location = new System.Drawing.Point(268, 244);
             this.textBoxTransPersonaRecibe.Name = "textBoxTransPersonaRecibe";
             this.textBoxTransPersonaRecibe.Size = new System.Drawing.Size(263, 34);
             this.textBoxTransPersonaRecibe.TabIndex = 50;
@@ -187,12 +175,22 @@ namespace BancoFinal
             this.label5.TabIndex = 49;
             this.label5.Text = "PERSONA QUIEN RECIBE : ";
             // 
+            // labelTransladarSaldoActual
+            // 
+            this.labelTransladarSaldoActual.AutoSize = true;
+            this.labelTransladarSaldoActual.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTransladarSaldoActual.Location = new System.Drawing.Point(231, 148);
+            this.labelTransladarSaldoActual.Name = "labelTransladarSaldoActual";
+            this.labelTransladarSaldoActual.Size = new System.Drawing.Size(0, 36);
+            this.labelTransladarSaldoActual.TabIndex = 52;
+            // 
             // TransladarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(601, 400);
+            this.Controls.Add(this.labelTransladarSaldoActual);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.textBoxTransPersonaRecibe);
             this.Controls.Add(this.label5);
@@ -202,7 +200,6 @@ namespace BancoFinal
             this.Controls.Add(this.textBoxTransValorATransladar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxTransladarSaldoActual);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -223,12 +220,12 @@ namespace BancoFinal
         private System.Windows.Forms.TextBox textBoxTransValorATransladar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxTransladarSaldoActual;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox textBoxTransPersonaRecibe;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelTransladarSaldoActual;
     }
 }

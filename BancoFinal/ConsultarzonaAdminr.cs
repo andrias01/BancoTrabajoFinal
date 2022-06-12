@@ -21,6 +21,10 @@ namespace BancoFinal
         private void btnConsultarClientes_Click(object sender, EventArgs e)
         {
             dataGridViewConsulta.Rows.Clear();
+            llenarDatos();
+        }
+        public void llenarDatos()
+        {
             StreamReader archivo = new StreamReader("clientes.txt");
             while (!archivo.EndOfStream)
             {

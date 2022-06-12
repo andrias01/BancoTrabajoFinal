@@ -78,7 +78,7 @@ namespace BancoFinal
             this.textBoxConsignar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxConsignar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxConsignar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxConsignar.ForeColor = System.Drawing.Color.Black;
+            this.textBoxConsignar.ForeColor = System.Drawing.Color.DimGray;
             this.textBoxConsignar.Location = new System.Drawing.Point(144, 200);
             this.textBoxConsignar.Name = "textBoxConsignar";
             this.textBoxConsignar.Size = new System.Drawing.Size(263, 26);

@@ -19,7 +19,7 @@ namespace BancoFinal
             InitializeComponent();
             ClientesSingleton NombreEnPantalla = ClientesSingleton.Getinstancia();
             NombreEnPantalla.DatosClienteActual(NombreEnPantalla.Nombre);
-            textBoxUsuarioEnSesion.Text = NombreEnPantalla.Nombre;
+            labelUsuarioEnSesion.Text = NombreEnPantalla.Nombre;
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

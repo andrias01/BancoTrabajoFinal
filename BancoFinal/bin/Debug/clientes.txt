@@ -1,5 +1,5 @@
-1212&Carlos&Velez Alcaraz&calle en la esquina&52368911&julian@gmail.com&55000
-1212&Julian&Velez Alcaraz&calle en la esquina&52368911&julian@gmail.com&55000
-1212&Andres&Velez Alcaraz&calle en la esquina&52368911&julian@gmail.com&51000
-1212&Orlando&Velez Alcaraz&calle en la esquina&52368911&julian@gmail.com&55000
-1212&Daniel&Velez Alcaraz&calle en la esquina&52368911&julian@gmail.com&55000
+1212&Andres&Velez&Calle&56156&Correo&28000
+1212&Julian&Velez&Calle&56156&Correo&50000
+1212&Orlando&Velez&Calle&56156&Correo&59000
+1212&Daniel&Velez&Calle&56156&Correo&50000
+4545&Carlos&GGGG&CArrera&586116&PuntoCon&45000

@@ -16,29 +16,15 @@ namespace BancoFinal
         public ConsultarDatosUsuario()
         {
             InitializeComponent();
-            string fileName = "clientes.txt";
-            string fileUsuario = "UsuarioEnSesion.txt";
-            StreamReader reader = File.OpenText(fileName);
-            StreamReader reader2 = File.OpenText(fileUsuario);
-            string Cliente = reader2.ReadLine();
-            while (!reader.EndOfStream)
-            {
-                string lineaActual = reader.ReadLine();
-                char[] separador = { '&' };
-                string[] datos = lineaActual.Split(separador);
-                if (datos[1] == Cliente)
-                {
-                    textBoxClaveConsultaUsuario.Text = datos[0];
-                    textBoxNombreConsultaUsuario.Text = datos[1];
-                    textBoxApellidoConsultaUsuario.Text = datos[2];
-                    textBoxDireccionConsultaUsuario.Text = datos[3];
-                    textBoxTelefonoConsultaUsuario.Text = datos[4];
-                    textBoxEmailConsultaUsuario.Text= datos[5];
-                    textBoxSaldoConsultaUsuario.Text = datos[6];
-                }
-            }
-            reader.Close();
-            reader2.Close();
+            ClientesSingleton DatosPantalla = ClientesSingleton.Getinstancia();
+            DatosPantalla.DatosClienteActual(DatosPantalla.Nombre);
+            textBoxClaveConsultaUsuario.Text = DatosPantalla.Clave;
+            textBoxNombreConsultaUsuario.Text = DatosPantalla.Nombre;
+            textBoxApellidoConsultaUsuario.Text = DatosPantalla.Apellido;
+            textBoxDireccionConsultaUsuario.Text = DatosPantalla.Direccion;
+            textBoxTelefonoConsultaUsuario.Text = DatosPantalla.Telefono;
+            textBoxEmailConsultaUsuario.Text = DatosPantalla.Email;
+            textBoxSaldoConsultaUsuario.Text = DatosPantalla.Saldo.ToString();
         }
         public struct Cliente
         {
@@ -108,6 +94,10 @@ namespace BancoFinal
                 }
             }
             
+        }
+        private void ConsultarDatosUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

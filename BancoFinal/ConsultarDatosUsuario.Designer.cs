@@ -358,6 +358,7 @@ namespace BancoFinal
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsultarDatosUsuario";
             this.Text = "ConsultarDatos";
+            this.Load += new System.EventHandler(this.ConsultarDatosUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

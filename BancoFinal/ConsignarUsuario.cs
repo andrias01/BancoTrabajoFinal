@@ -43,7 +43,7 @@ namespace BancoFinal
             string fileCopia = "Copia_Clientes.txt";
             string NombreUsuario = ConsiganarSegunElCliente.Nombre;
             string ValorAConsignar = textBoxConsignar.Text;
-            ConsiganarSegunElCliente.Archivo(fileName,fileCopia,NombreUsuario,null,ValorAConsignar,null,null,null,null);
+            ConsiganarSegunElCliente.Archivo(fileName, fileCopia, NombreUsuario, null, ValorAConsignar, null, null, null, null);
         }
     }
 }
