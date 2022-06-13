@@ -91,6 +91,7 @@ namespace BancoFinal
             this.OlvidadoContraseñaAdmin.TabIndex = 13;
             this.OlvidadoContraseñaAdmin.TabStop = true;
             this.OlvidadoContraseñaAdmin.Text = "¿Ha olvidado la contraseña?";
+            this.OlvidadoContraseñaAdmin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OlvidadoContraseñaAdmin_LinkClicked);
             // 
             // btnAccederAdmin
             // 

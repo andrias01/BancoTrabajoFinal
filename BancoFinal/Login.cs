@@ -108,5 +108,18 @@ namespace BancoFinal
             LoginAdmin fomularioAdmin = new LoginAdmin();
             fomularioAdmin.Show();
         }
+        private void OlvidadoContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (textBoxUsuario.Text == String.Empty)
+                MessageBox.Show("Debe Digitar el nombre de usuario");
+            else
+            {
+                ClientesSingleton olvidoSesion = ClientesSingleton.Getinstancia();
+                olvidoSesion.Nombre = textBoxUsuario.Text;
+                olvidoSesion.DatosClienteActual(olvidoSesion.Nombre);
+                MessageBox.Show("Su clave es "+ olvidoSesion.Clave,"Esta es la contraseña de " + olvidoSesion.Nombre);
+            }
+            
+        }
     }
 }

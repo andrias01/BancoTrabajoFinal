@@ -90,5 +90,13 @@ namespace BancoFinal
             }
 
         }
+
+        private void OlvidadoContraseñaAdmin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            ClientesSingleton ClaveAdmin = ClientesSingleton.Getinstancia();
+            ClaveAdmin.Archivo("Admin.txt", null, null, null, null, null,null,"OlvidoAdmin",null);
+            MessageBox.Show("Tiene como Clave de ADMINISTRADOR : "+ClaveAdmin.Clave,"Usuario Admin");
+        }
     }
 }

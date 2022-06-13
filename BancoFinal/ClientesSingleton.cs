@@ -42,7 +42,7 @@ namespace BancoFinal
         {
             menuInicial formulario2 = new menuInicial();
             formulario2.Show();
-            MessageBox.Show($"Inicio SESION {0}", NOmbre);
+            MessageBox.Show("SE INICIO SESION CORRECTAMENTE","HOLA "+NOmbre);
         }
         //Mensajes Sino se Cumple
         public void EliminarsiNO()
@@ -81,6 +81,11 @@ namespace BancoFinal
                     string lineaActual = reader.ReadLine();
                     char[] separador = { '&' };
                     string[] datos = lineaActual.Split(separador);
+                    if (VAlorAcambiar== "OlvidoAdmin")
+                    {
+                        band = 1;
+                        clave = datos[0];
+                    }
                     if (datos[0] == COntraseña && datos[1] == NOmbre && writer == null && reader != null)
                     {
                         siNoCual = "Sesion";

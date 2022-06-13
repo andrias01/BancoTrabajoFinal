@@ -29,6 +29,7 @@ namespace BancoFinal
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsignarUsuario));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,6 +37,15 @@ namespace BancoFinal
             this.textBoxConsignar = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnConsignarAccion = new System.Windows.Forms.Button();
+            this.labelHora = new System.Windows.Forms.Label();
+            this.labelMinutos = new System.Windows.Forms.Label();
+            this.labelSegundos = new System.Windows.Forms.Label();
+            this.labelDia = new System.Windows.Forms.Label();
+            this.labelMes = new System.Windows.Forms.Label();
+            this.labelAño = new System.Windows.Forms.Label();
+            this.HoraFecha = new System.Windows.Forms.Timer(this.components);
+            this.labelTextoTiempo = new System.Windows.Forms.Label();
+            this.labelFecha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -114,12 +124,107 @@ namespace BancoFinal
             this.btnConsignarAccion.UseVisualStyleBackColor = true;
             this.btnConsignarAccion.Click += new System.EventHandler(this.btnConsignarAccion_Click);
             // 
+            // labelHora
+            // 
+            this.labelHora.AutoSize = true;
+            this.labelHora.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHora.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelHora.Location = new System.Drawing.Point(663, 45);
+            this.labelHora.Name = "labelHora";
+            this.labelHora.Size = new System.Drawing.Size(0, 41);
+            this.labelHora.TabIndex = 12;
+            // 
+            // labelMinutos
+            // 
+            this.labelMinutos.AutoSize = true;
+            this.labelMinutos.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMinutos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelMinutos.Location = new System.Drawing.Point(663, 86);
+            this.labelMinutos.Name = "labelMinutos";
+            this.labelMinutos.Size = new System.Drawing.Size(0, 41);
+            this.labelMinutos.TabIndex = 13;
+            // 
+            // labelSegundos
+            // 
+            this.labelSegundos.AutoSize = true;
+            this.labelSegundos.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSegundos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelSegundos.Location = new System.Drawing.Point(663, 127);
+            this.labelSegundos.Name = "labelSegundos";
+            this.labelSegundos.Size = new System.Drawing.Size(0, 41);
+            this.labelSegundos.TabIndex = 14;
+            // 
+            // labelDia
+            // 
+            this.labelDia.AutoSize = true;
+            this.labelDia.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDia.ForeColor = System.Drawing.Color.DimGray;
+            this.labelDia.Location = new System.Drawing.Point(633, 231);
+            this.labelDia.Name = "labelDia";
+            this.labelDia.Size = new System.Drawing.Size(0, 28);
+            this.labelDia.TabIndex = 15;
+            // 
+            // labelMes
+            // 
+            this.labelMes.AutoSize = true;
+            this.labelMes.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMes.ForeColor = System.Drawing.Color.DimGray;
+            this.labelMes.Location = new System.Drawing.Point(651, 268);
+            this.labelMes.Name = "labelMes";
+            this.labelMes.Size = new System.Drawing.Size(0, 28);
+            this.labelMes.TabIndex = 16;
+            // 
+            // labelAño
+            // 
+            this.labelAño.AutoSize = true;
+            this.labelAño.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAño.ForeColor = System.Drawing.Color.DimGray;
+            this.labelAño.Location = new System.Drawing.Point(651, 306);
+            this.labelAño.Name = "labelAño";
+            this.labelAño.Size = new System.Drawing.Size(0, 28);
+            this.labelAño.TabIndex = 17;
+            // 
+            // HoraFecha
+            // 
+            this.HoraFecha.Enabled = true;
+            this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
+            // 
+            // labelTextoTiempo
+            // 
+            this.labelTextoTiempo.AutoSize = true;
+            this.labelTextoTiempo.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTextoTiempo.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelTextoTiempo.Location = new System.Drawing.Point(631, 4);
+            this.labelTextoTiempo.Name = "labelTextoTiempo";
+            this.labelTextoTiempo.Size = new System.Drawing.Size(117, 41);
+            this.labelTextoTiempo.TabIndex = 18;
+            this.labelTextoTiempo.Text = "HORA";
+            // 
+            // labelFecha
+            // 
+            this.labelFecha.AutoSize = true;
+            this.labelFecha.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFecha.ForeColor = System.Drawing.Color.DimGray;
+            this.labelFecha.Location = new System.Drawing.Point(646, 194);
+            this.labelFecha.Name = "labelFecha";
+            this.labelFecha.Size = new System.Drawing.Size(101, 32);
+            this.labelFecha.TabIndex = 19;
+            this.labelFecha.Text = "FECHA";
+            // 
             // ConsignarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(601, 400);
+            this.ClientSize = new System.Drawing.Size(760, 400);
+            this.Controls.Add(this.labelFecha);
+            this.Controls.Add(this.labelTextoTiempo);
+            this.Controls.Add(this.labelAño);
+            this.Controls.Add(this.labelMes);
+            this.Controls.Add(this.labelDia);
+            this.Controls.Add(this.labelSegundos);
+            this.Controls.Add(this.labelMinutos);
+            this.Controls.Add(this.labelHora);
             this.Controls.Add(this.btnConsignarAccion);
             this.Controls.Add(this.textBoxConsignar);
             this.Controls.Add(this.pictureBox2);
@@ -144,5 +249,14 @@ namespace BancoFinal
         private System.Windows.Forms.TextBox textBoxConsignar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnConsignarAccion;
+        private System.Windows.Forms.Label labelHora;
+        private System.Windows.Forms.Label labelMinutos;
+        private System.Windows.Forms.Label labelSegundos;
+        private System.Windows.Forms.Label labelDia;
+        private System.Windows.Forms.Label labelMes;
+        private System.Windows.Forms.Label labelAño;
+        private System.Windows.Forms.Timer HoraFecha;
+        private System.Windows.Forms.Label labelTextoTiempo;
+        private System.Windows.Forms.Label labelFecha;
     }
 }

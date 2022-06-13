@@ -45,5 +45,14 @@ namespace BancoFinal
             string ValorAConsignar = textBoxConsignar.Text;
             ConsiganarSegunElCliente.Archivo(fileName, fileCopia, NombreUsuario, null, ValorAConsignar, null, null, null, null);
         }
+        private void HoraFecha_Tick(object sender, EventArgs e)
+        {
+            labelHora.Text = DateTime.Now.ToString("hh:");
+            labelMinutos.Text = DateTime.Now.ToString("mm:");
+            labelSegundos.Text = DateTime.Now.ToString("ss");
+            labelDia.Text = DateTime.Now.ToString("dddd");
+            labelMes.Text = DateTime.Now.ToString("MMMMM");
+            labelAño.Text = DateTime.Now.ToString("yyy");
+        }
     }
 }

@@ -208,6 +208,7 @@ namespace BancoFinal
             this.OlvidadoContraseña.TabIndex = 7;
             this.OlvidadoContraseña.TabStop = true;
             this.OlvidadoContraseña.Text = "¿Ha olvidado la contraseña?";
+            this.OlvidadoContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OlvidadoContraseña_LinkClicked);
             // 
             // pictureBox3
             // 
