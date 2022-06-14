@@ -110,7 +110,7 @@ namespace BancoFinal
         }
         private void OlvidadoContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (textBoxUsuario.Text == String.Empty)
+            if (textBoxUsuario.Text == String.Empty || textBoxUsuario.Text == "USUARIO")
                 MessageBox.Show("Debe Digitar el nombre de usuario");
             else
             {

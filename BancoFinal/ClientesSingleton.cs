@@ -84,7 +84,7 @@ namespace BancoFinal
                     if (VAlorAcambiar== "OlvidoAdmin")
                     {
                         band = 1;
-                        clave = datos[0];
+                        clave = lineaActual;
                     }
                     if (datos[0] == COntraseña && datos[1] == NOmbre && writer == null && reader != null)
                     {
@@ -92,15 +92,18 @@ namespace BancoFinal
                         band = 1;
                         entrarASecion(NOmbre);
                     }
-                    if (datos[1] == NOmbre && writer == null)
+                    if (VAlorAcambiar==null)
                     {
-                        clave = datos[0];
-                        nombre = datos[1];
-                        apellido = datos[2];
-                        direccion = datos[3];
-                        telefono = datos[4];
-                        email = datos[5];
-                        saldo = int.Parse(datos[6]);
+                        if (writer == null && datos[1] == NOmbre)
+                        {
+                            clave = datos[0];
+                            nombre = datos[1];
+                            apellido = datos[2];
+                            direccion = datos[3];
+                            telefono = datos[4];
+                            email = datos[5];
+                            saldo = int.Parse(datos[6]);
+                        }
                     }
                     if (writer != null && VAlorConsignar != null && VAlorRerirar == null)
                     {

@@ -38,3 +38,5 @@ C:\Users\Usuario\Source\Repos\BancoTrabajoFinal\BancoFinal\obj\Debug\BancoFinal.
 C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.ConsultarDatosUsuario.resources
 C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.RetirarUsuario.resources
 C:\Users\andre\source\repos\BancoFinal\BancoFinal\obj\Debug\BancoFinal.TransladarUsuario.resources
+C:\Users\Usuario\Source\Repos\BancoTrabajoFinal\BancoFinal\obj\Debug\BancoFinal.RetirarUsuario.resources
+C:\Users\Usuario\Source\Repos\BancoTrabajoFinal\BancoFinal\obj\Debug\BancoFinal.TransladarUsuario.resources
